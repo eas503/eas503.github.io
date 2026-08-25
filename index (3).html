@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>EAS 503: Programming and Database Fundamentals for Data Scientists</title>
+  <style>
+    :root { --bg:#0a0f14; --text:#e6edf3; --muted:#9aa9b8; --line:#253444; --accent:#78f7a8; --accent-soft:rgba(120,247,168,.11); --content:860px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; min-width:320px; color:var(--text); background:radial-gradient(circle at 88% 0%,rgba(46,138,89,.19),transparent 33rem),linear-gradient(180deg,#0c131a 0,var(--bg) 45rem); font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; line-height:1.72; }
+    a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:.22em; }
+    a:hover,a:focus-visible { color:#c5ffdb; }
+    a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+    .shell { width:min(var(--content),calc(100% - 2.6rem)); margin:0 auto; }
+    .site-header { position:sticky; z-index:10; top:0; border-bottom:1px solid var(--line); background:rgba(10,15,20,.83); backdrop-filter:blur(12px); }
+    .nav { min-height:66px; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .brand { color:var(--text); font-weight:800; text-decoration:none; letter-spacing:.04em; }
+    .brand::before { content:">_"; margin-right:.65rem; color:var(--accent); }
+    .nav-links { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:.25rem; }
+    .nav-links a { color:var(--muted); padding:.42rem .58rem; border-radius:5px; text-decoration:none; font-size:.88rem; }
+    .nav-links a:hover,.nav-links a:focus-visible { color:var(--accent); background:var(--accent-soft); outline:none; }
+    main { padding:5.4rem 0 4.8rem; }
+    .prompt { margin:0 0 1rem; color:var(--accent); font-size:.82rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+    h1 { max-width:20ch; margin:0; font-size:clamp(2.25rem,6vw,4.5rem); line-height:1.04; letter-spacing:-.07em; }
+    .cursor { color:var(--accent); animation:blink 1.05s steps(2,start) infinite; }
+    @keyframes blink { 50% { opacity:0; } }
+    .lede { max-width:68ch; margin:1.8rem 0 0; color:var(--muted); font-size:1.05rem; }
+    .toc { display:flex; flex-wrap:wrap; gap:.55rem .9rem; margin:2.2rem 0 0; padding:0; list-style:none; }
+    .toc a { display:block; padding:.38rem .6rem; border:1px solid var(--line); border-radius:5px; color:var(--muted); text-decoration:none; font-size:.84rem; }
+    .toc a:hover,.toc a:focus-visible { color:var(--accent); border-color:var(--accent); background:var(--accent-soft); outline:none; }
+    .content { margin-top:4.5rem; }
+    section { scroll-margin-top:100px; }
+    section + section { margin-top:3.7rem; }
+    h2 { position:relative; margin:0 0 1.15rem; padding:0 0 .78rem 1.15rem; border-bottom:1px solid var(--line); font-size:clamp(1.35rem,3.3vw,1.9rem); line-height:1.2; letter-spacing:-.04em; }
+    h2::before { content:""; position:absolute; top:.24em; left:0; width:.38rem; height:.96em; border-left:2px solid var(--accent); border-top:2px solid var(--accent); border-bottom:2px solid var(--accent); opacity:.95; }
+    p { margin:0 0 1.25rem; }
+    ol,ul { margin:0 0 1.35rem; padding-left:1.55rem; }
+    li { margin:.68rem 0; }
+    li::marker { color:var(--accent); }
+    strong { color:#fff; }
+    code { padding:.12em .35em; border:1px solid var(--line); border-radius:4px; color:#d6ffe5; background:rgba(120,247,168,.08); font-family:inherit; font-size:.9em; }
+    hr { height:1px; margin:4rem 0; border:0; background:var(--line); }
+    footer { padding:1.5rem 0 2.7rem; color:var(--muted); border-top:1px solid var(--line); font-size:.84rem; }
+    @media (max-width:600px) { .nav { min-height:auto; padding:.95rem 0; align-items:flex-start; flex-direction:column; } .nav-links { justify-content:flex-start; } main { padding-top:3.7rem; } .content { margin-top:3.6rem; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="EAS 503 home">EAS503</a>
+      <nav class="nav-links" aria-label="Course navigation">
+        <a href="course-notes/">Course Notes</a>
+        <a href="resources/">Resources</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top" class="shell">
+    <p class="prompt">University at Buffalo / EAS 503</p>
+    <h1>EAS 503: Programming and Database Fundamentals for Data Scientists<span class="cursor" aria-hidden="true">_</span></h1>
+    <p class="lede">Course information, assessment policies, and academic integrity expectations.</p>
+    <nav aria-label="On this page">
+      <ul class="toc">
+        <li><a href="#course-information">Course Information</a></li>
+        <li><a href="#office-hours">Office Hours</a></li>
+        <li><a href="#course-grading">Course Grading</a></li>
+        <li><a href="#quizzes">Quizzes</a></li>
+        <li><a href="#programming-assignments">Programming Assignments</a></li>
+        <li><a href="#individual-projects">Individual Projects</a></li>
+        <li><a href="#in-class-queries">In-Class Queries</a></li>
+        <li><a href="#grade-policy">Grade Policy</a></li>
+        <li><a href="#academic-integrity">Academic Integrity</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <section id="course-information"><h2>Course Information</h2><p><strong>Instructors:</strong> Adithya Narayanan<br>Email: adithyan at buffalo.edu</p></section>
+      <section id="office-hours"><h2>Office Hours:</h2><p>Tuesdays and Thursdays: 10-10:50am. Virtually via Zoom (link will be shared via email)</p></section>
+      <section id="course-grading"><h2>Course Grading</h2><ul><li>Quizzes (4) – 20%</li><li>Programming Assignments (5) – 50%</li><li>Project (1) – 20%</li><li>In-Class Queries – 10%</li></ul></section>
+      <section id="quizzes"><h2>Quizzes</h2><ol><li><strong>Assessment Format:</strong> Quizzes will be administered through UBlearns, or via paper and pen testing. An online programming platform may also be used.</li><li><strong>Academic Integrity:</strong> Collaboration is not permitted during quizzes. Use only authorized resources, namely the course website, while working on quizzes. Any collaboration with others or unauthorized external resources will result in a score of 0 for the quiz. Cases of academic integrity violations will be reported to the Office of Academic Integrity.</li></ol></section>
+      <section id="programming-assignments"><h2>Programming Assignments</h2><p>In this course, programming assignments are a crucial component of your learning experience. To facilitate this, please note the following guidelines.</p><ol><li><strong>Codio License Requirement:</strong> A Codio license, priced at 48 dollars, is necessary for completing programming assignments. This platform will be the designated environment for assignment completion and evaluation.</li><li><strong>Assignment Platform:</strong> All programming assignments will be both assigned and evaluated exclusively on the Codio platform. It is essential to familiarize yourself with Codio’s interface and tools to ensure a seamless assignment process.</li><li><strong>Submission Protocol:</strong> To have your programming assignments graded, you must submit them through the Codio platform. Submissions made via UB Learns will not undergo the grading process.</li><li><strong>Submission Retries:</strong> You have the flexibility of unlimited submissions and retries for each assignment up until the specified deadline. This approach encourages iterative learning and allows you to refine your solutions over multiple attempts.</li><li><strong>Grade Contest Period:</strong> Following the completion of the assignment evaluations, you will have a window of seven days to contest your assigned grade. This timeframe offers an opportunity to seek clarification and address any concerns you may have regarding the grading process.</li><li><strong>Final Programming Assignment:</strong> The final programming assignment in the course, if time and resources permit, will be a technical interview–style real-time programming assignment. More details on this will be finalized by March based on class progress.</li></ol><p><strong>Note</strong>: Periodically, students will be asked to explain the code submitted in their assignments to ensure that the code is understood and written by a student, and not just by AI. A notification of this isn't a notification of an academic integrity violation. It is a routine process.</p></section>
+      <section id="individual-projects"><h2>Individual Projects</h2><p>In this course, projects serve as extensions of the programming assignments.</p><ol><li><strong>Nature of Projects:</strong> Projects are designed to provide you with a deeper engagement with the course material and encompass more complex tasks compared to regular programming assignments.</li><li><strong>Code and Output:</strong> Projects are extremely flexible assessments. In each project, each student selects a topic of interest, finds data in that area, and analyzes it using techniques learned in class up to that point. Each project will have specified requirements, such as tasks to complete or algorithms and models to use, and a comprehensive list of these requirements will be provided in advance.<ul><li>Each project will require a brief proposal, which the TA or instructor must approve. Only upon approval will a project be considered valid for submission.</li></ul></li><li><strong>Grade Contestation Period:</strong> After project evaluations are completed, you will have a seven-day window to contest your assigned grade, seek clarification, and address any concerns regarding the grading process.</li></ol><p><strong>Note</strong>: Projects will also involve a final presentation.</p></section>
+      <section id="in-class-queries"><h2>In-Class Queries</h2><p>The instructor will, at the start of most weeks, post resources that cover the ideas to be discussed in class. Students will be queried in class on this material to support an interactive learning environment.</p><p>Throughout the semester, each student will receive at least two such questions. When called upon, students are expected to answer in a way that demonstrates effort toward understanding the topic; answers do not have to be fully accurate, but they must reflect a good-faith effort.</p></section>
+      <section id="grade-policy"><h2>Grade Policy</h2><p>Grades will be based on points accumulated for each course component. At the discretion of the instructors, students who are within 0.5% of a grade cutoff may be eligible for the next higher grade if all work has been submitted for the semester and there are no academic integrity violations by the student.</p></section>
+      <section id="academic-integrity"><h2>Academic Integrity Policy</h2><p>Academic integrity is a fundamental university value. Through the honest completion of academic work, students sustain the integrity of the university and of themselves while facilitating the university's imperative for the transmission of knowledge and culture based upon the generation of new and innovative ideas. For more information, please refer to the <a href="https://www.buffalo.edu/grad/succeed/current-students/policy-library.html#academic-integrity">Graduate Academic Integrity policy</a>.</p><p>The academic integrity policies specific to this course are as follows:</p><ol><li>Submission of identical homework solutions by multiple students will result in all parties involved earning zero points for those shared solutions.</li><li>If a student’s identity is verified as the source of uploaded content on any online platform, an automatic failure in the course will be incurred.</li><li>Any student positively identified as viewing the solution for any problem, regardless of duration, will receive a score of zero for the problem(s) viewed.</li></ol><p>All breaches of academic integrity will be reported to the Office of Academic Integrity. Repeated violations will lead to escalated sanctions.</p><p>Embrace sound cyber-security practices. Refrain from granting physical or electronic access to your computer or accounts. Sharing access that leads to another student violating the Academic Integrity Policy makes you liable.</p><hr><p>For additional information on Health and Wellness, Sexual Violence, and Equity, Diversity and Inclusion resources - please visit <a href="https://drive.google.com/file/d/18GOqtn-SiOwIpaDo2ei_HkEL-fCwVaJO/view?usp=drive_link">this document</a>.</p></section>
+    </div>
+  </main>
+  <footer><div class="shell">EAS503</div></footer>
+</body>
+</html>
