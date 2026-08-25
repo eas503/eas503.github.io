@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Resources | EAS 503</title>
+  <style>
+    :root { --bg:#0a0f14; --text:#e6edf3; --muted:#9aa9b8; --line:#253444; --accent:#78f7a8; --soft:rgba(120,247,168,.11); --content:860px; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-width:320px; min-height:100vh; color:var(--text); background:radial-gradient(circle at 88% 0%,rgba(46,138,89,.19),transparent 33rem),linear-gradient(180deg,#0c131a 0,var(--bg) 45rem); font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; line-height:1.72; }
+    a { color:var(--accent); text-underline-offset:.22em; }
+    a:hover,a:focus-visible { color:#c5ffdb; }
+    a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+    .shell { width:min(var(--content),calc(100% - 2.6rem)); margin:0 auto; }
+    header { position:sticky; top:0; z-index:10; border-bottom:1px solid var(--line); background:rgba(10,15,20,.83); backdrop-filter:blur(12px); }
+    .nav { min-height:66px; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .brand { color:var(--text); font-weight:800; letter-spacing:.04em; text-decoration:none; }
+    .brand::before { content:">_"; margin-right:.65rem; color:var(--accent); }
+    .nav-links { display:flex; flex-wrap:wrap; gap:.25rem; }
+    .nav-links a { color:var(--muted); border-radius:5px; padding:.42rem .58rem; font-size:.88rem; text-decoration:none; }
+    .nav-links a:hover,.nav-links a:focus-visible,.nav-links a[aria-current="page"] { color:var(--accent); background:var(--soft); outline:none; }
+    main { padding:5.4rem 0 5rem; }
+    .prompt { margin:0 0 1rem; color:var(--accent); font-size:.82rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+    h1 { margin:0; font-size:clamp(2.25rem,6vw,4.5rem); line-height:1.04; letter-spacing:-.07em; }
+    .cursor { color:var(--accent); animation:blink 1.05s steps(2,start) infinite; }
+    @keyframes blink { 50% { opacity:0; } }
+    .placeholder { max-width:72ch; margin-top:2.2rem; padding:1.35rem; border-left:2px solid var(--accent); border-top:1px solid var(--line); border-right:1px solid var(--line); border-bottom:1px solid var(--line); border-radius:0 8px 8px 0; color:var(--muted); background:rgba(255,255,255,.018); }
+    .placeholder strong { color:var(--text); }
+    footer { border-top:1px solid var(--line); padding:1.5rem 0 2.7rem; color:var(--muted); font-size:.84rem; }
+    @media (max-width:600px) { .nav { min-height:auto; padding:.95rem 0; align-items:flex-start; flex-direction:column; } main { padding-top:3.7rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell nav">
+      <a class="brand" href="../" aria-label="EAS 503 home">EAS503</a>
+      <nav class="nav-links" aria-label="Course navigation">
+        <a href="../course-notes/">Course Notes</a>
+        <a href="./" aria-current="page">Resources</a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell">
+    <p class="prompt">EAS 503 / Resources</p>
+    <h1>Resources<span class="cursor" aria-hidden="true">_</span></h1>
+    <div class="placeholder"><strong>Ready for your content.</strong><br>Add your course resources here.</div>
+  </main>
+  <footer><div class="shell">EAS503</div></footer>
+</body>
+</html>
