@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Course Notes | EAS 503</title>
+  <style>
+    :root {
+      --bg: #0a0f14;
+      --text: #e6edf3;
+      --muted: #9aa9b8;
+      --line: #253444;
+      --accent: #78f7a8;
+      --accent-soft: rgba(120, 247, 168, .11);
+      --content: 860px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 88% 0%, rgba(46, 138, 89, .19), transparent 33rem),
+        linear-gradient(180deg, #0c131a 0, var(--bg) 45rem);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      line-height: 1.72;
+    }
+
+    a { color: var(--accent); text-underline-offset: .22em; }
+    a:hover, a:focus-visible { color: #c5ffdb; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    .shell { width: min(var(--content), calc(100% - 2.6rem)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(10, 15, 20, .83);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-decoration: none;
+    }
+
+    .brand::before { content: ">_"; margin-right: .65rem; color: var(--accent); }
+
+    .nav-links { display: flex; flex-wrap: wrap; gap: .25rem; }
+
+    .nav-links a {
+      color: var(--muted);
+      border-radius: 5px;
+      padding: .42rem .58rem;
+      font-size: .88rem;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible,
+    .nav-links a[aria-current="page"] {
+      color: var(--accent);
+      background: var(--accent-soft);
+      outline: none;
+    }
+
+    main { padding: 5.4rem 0 5rem; }
+
+    .prompt {
+      margin: 0 0 1rem;
+      color: var(--accent);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.25rem, 6vw, 4.5rem);
+      line-height: 1.04;
+      letter-spacing: -.07em;
+    }
+
+    .cursor { color: var(--accent); animation: blink 1.05s steps(2, start) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .table-wrap {
+      margin-top: 2.4rem;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .018);
+    }
+
+    table { width: 100%; min-width: 620px; border-collapse: collapse; }
+
+    th, td {
+      min-height: 58px;
+      padding: .9rem 1rem;
+      text-align: left;
+      vertical-align: middle;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    th:last-child, td:last-child { border-right: 0; }
+    tr:last-child td { border-bottom: 0; }
+
+    th {
+      color: var(--accent);
+      background: rgba(120, 247, 168, .07);
+      font-size: .84rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    td { color: var(--muted); }
+
+    td a {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration-color: rgba(120, 247, 168, .55);
+    }
+
+    td a:hover, td a:focus-visible { color: var(--accent); }
+
+    .date { white-space: nowrap; color: var(--accent); }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 1.5rem 0 2.7rem;
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    @media (max-width: 600px) {
+      .nav { min-height: auto; padding: .95rem 0; align-items: flex-start; flex-direction: column; }
+      main { padding-top: 3.7rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="EAS 503 home">EAS503</a>
+      <nav class="nav-links" aria-label="Course navigation">
+        <a href="course-notes.html" aria-current="page">Course Notes</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <p class="prompt">EAS 503 / Course Notes</p>
+    <h1>Course Notes<span class="cursor" aria-hidden="true">_</span></h1>
+
+    <div class="table-wrap">
+      <table aria-label="Course notes">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Topic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="date">Aug 27</td>
+            <td>
+              <a href="https://drive.google.com/file/d/1g9F98PRYRs4GI7Thkgg4i7_2QEHV0AHf/view?usp=sharing" target="_blank" rel="noopener noreferrer">Introduction to Algorithmic Thinking [Continued]</a>
+            </td>
+          </tr>
+          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer><div class="shell">EAS503</div></footer>
+</body>
+</html>
